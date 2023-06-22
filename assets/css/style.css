@@ -1,0 +1,342 @@
+
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: .75rem;
+}
+
+.section {
+    padding-block: 5rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.header {
+    height: 5rem;
+    border-bottom: 1px solid hsl(219, 70%, 25%);
+}
+
+.nav,
+.nav__list {
+    display: flex;
+}
+
+.nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.nav__menu {
+    margin-left: auto;
+}
+
+.nav__list {
+    column-gap: 2.5rem;
+}
+
+
+.nav__link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: hsl(0, 0%, 37%);
+    transition: .3s;
+}
+
+.nav__link.active {
+    color: hsl(0, 0%, 9%);
+}
+
+.nav__link:hover {
+    color: hsl(0, 0%, 9%);
+}
+
+.banner {
+    position: relative;
+}
+
+.banner__img {
+    width: 100%;
+}
+
+.banner__titulo {
+    color: rgb(240, 240, 240);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    font-size: 5.1rem;
+    font-family: "Pacifico", sans-serif;
+    font-weight: 400;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, .75);
+}
+
+/*====== SECCION SOBRE RECETAS */
+
+.sobre {
+    text-align: center;
+}
+
+.sobre__titulo,
+.quienes__somos--titulo {
+    font-size: 3.16rem;
+    font-family: "Pacifico", sans-serif;
+    color: #DA2B1F;
+    padding-bottom: 1.1rem;
+}
+
+.sobre__parrafo,
+.quienes__somos--descripcion {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    color: #727070;
+}
+
+/*====== RECETAS ======*/
+.recetas {
+    background: #dab997;
+}
+
+.recetas__container {
+    /* display: flex;
+    flex-wrap: wrap; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.receta {
+    /* display: flex;
+    flex-direction: column; */
+    background: rgb(230, 229, 227);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.receta__imagen {
+    width: 100%;
+}
+
+.receta__contenido {
+    padding: 1rem;
+}
+
+.receta__titulo {
+    font-weight: 600;
+    font-size: 1.4375rem;
+}
+
+.receta__titulo,
+.receta__descripcion {
+    text-align: center;
+}
+
+.receta__descripcion {
+    font-size: 1.1rem;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.boton__container {
+    display: flex;
+    justify-content: center;
+}
+
+.receta__boton {
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #DA2B1F;
+    background: #DA2B1F;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.receta__boton:hover {
+    color: #DA2B1F;
+    background: transparent;
+}
+
+/*====== QUIENES SOMOS ======*/
+.quienes__somos {
+    background: #E5E5E5;
+}
+
+.quienes__somos--descripcion {
+    margin-bottom: 5rem;
+}
+.personas {
+    display: flex;
+    justify-content: center;
+    column-gap: 10rem;
+    flex-wrap: wrap;
+}
+
+.persona {
+    display: flex;
+    flex-direction: column;
+}
+
+.persona__imagen {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.persona__imagen--roberta {
+    background-image: url(../img/personas/roberta.jpg);   
+}
+.persona__imagen--marcela {
+    background-image: url(../img/personas/marcela.jpg);   
+}
+.persona__imagen--andrea {
+    background-image: url(../img/personas/andrea.jpg);   
+}
+
+.persona__nombre {
+    font-size: 1.5rem;
+    font-family: "Pacifico", sans-serif;
+    color: #DA2B1F;
+    margin-bottom: 1rem;
+}
+
+.persona__funcion {
+    font-size: 1rem;
+    color: #727070;
+}
+
+/*====== FOOTER ======*/
+.footer {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+}
+
+.contacto__titulo {
+    font-size: 2rem;
+    text-align: center;
+    color: #727070;
+}
+
+.contacto__socials {
+    margin-left: .8rem;
+}
+
+/*====== RESPONSIVE ======*/
+/*====== LARGE DEVICES ======*/
+@media screen and (max-width: 90em) {
+    .container {
+        max-width: 1260px;
+    }    
+}
+
+@media screen and (max-width: 78.75em) {
+    .container {
+        max-width: 960px;
+    }    
+}
+
+@media screen and (max-width: 62em) {
+    .container {
+        max-width: 720px;
+    }
+
+
+    .recetas__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contacto__socials {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 48em) {
+    .container {
+        padding-right: 1rem;
+    }
+    
+    .nav__list {
+        column-gap: 1.5rem;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+    }
+
+    .banner__titulo {
+        font-size: 2.5rem;
+    }
+
+    .sobre__titulo,
+    .quienes__somos--titulo {
+        font-size: 2rem;
+    }
+
+    .receta__descripcion {
+        font-size: 1rem;
+    }
+
+    .recetas__container {
+        max-width: 480px;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .persona {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 34em) {
+
+    .header {
+        padding: 0 1rem;
+        justify-content: center;
+    }
+
+    .nav__logo {
+        display: none;
+    }
+
+    .recetas__container {
+        max-width: 350px;
+    }
+
+    .contacto__titulo {
+        font-size: 1.3rem;
+    }
+
+    .contacto__socials {
+        width: 45px;
+        height: 45px;
+    }
+}
